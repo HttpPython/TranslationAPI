@@ -47,6 +47,11 @@ class Language (lang : String, path : String){
         return file.getString(key)
     }
 
+    fun exists(): Boolean {
+        if(file.exists()) return true
+        return false
+    }
+
     fun get(): Language {
         return this
     }
