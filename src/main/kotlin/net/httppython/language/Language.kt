@@ -4,9 +4,9 @@ import org.simpleyaml.configuration.file.YamlFile
 
 class Language (lang : String, path : String){
 
-    val lang = lang
-    val path = path
-    var file : YamlFile = YamlFile(path)
+    private val lang = lang
+    private val path = path
+    private var file : YamlFile = YamlFile(path)
 
     fun create() {
         if(file.exists()) return
@@ -40,6 +40,10 @@ class Language (lang : String, path : String){
         if(!file.contains(key)) return
         file.set(key, newKey)
         file.save()
+    }
+
+    fun get(): Language {
+        return this
     }
 
 }
