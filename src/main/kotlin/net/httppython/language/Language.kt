@@ -42,6 +42,11 @@ class Language (lang : String, path : String){
         file.save()
     }
 
+    fun getTranslation(key : String): String {
+        if(!file.contains(key)) return "Not Found"
+        return file.getString(key)
+    }
+
     fun get(): Language {
         return this
     }
