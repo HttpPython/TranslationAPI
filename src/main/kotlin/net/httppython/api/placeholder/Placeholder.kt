@@ -1,6 +1,6 @@
 package net.httppython.api.placeholder
 
-class Placeholder {
+class Placeholder(name : String){
 
     //in progress
 
