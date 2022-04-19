@@ -1,7 +1,12 @@
 package net.httppython.api.placeholder
 
-class Placeholder(name : String){
+class Placeholder(name : String, path : String){
 
-    //in progress
+    val name = name
+    val path = path
+
+    fun create() {
+
+    }
 
 }

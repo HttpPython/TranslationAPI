@@ -23,6 +23,7 @@ class Language(language : String, path : String) {
         }
         if(!file.contains(key)) {
             file.set(key, "Configure me!")
+            file.save()
             print("This translation got created.")
             return file.getString(key)
         }
@@ -39,6 +40,7 @@ class Language(language : String, path : String) {
             return
         }
         file.set(key, "Configure me!")
+        file.save()
         print("This translation got created.")
     }
 
@@ -49,10 +51,12 @@ class Language(language : String, path : String) {
         }
         if(!file.contains(key)) {
             file.set(key, "Configure me!")
+            file.save()
             print("This translation got created.")
             return
         }
         file.set(key, value)
+        file.save()
         print("This translation got configured.")
     }
 
